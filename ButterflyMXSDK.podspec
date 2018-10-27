@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
   s.ios.vendored_frameworks = 'ButterflyMXSDK.framework'
-  s.ios.vendored_libraries = 'ButterflyMXSDK/pjsip/lib/pjsip.a'
+  s.ios.vendored_libraries = 'pjsip/lib/pjsip.a'
   s.ios.xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/pjsip/include"' }
 
   s.dependency 'Alamofire', '~> 4.7.3'
