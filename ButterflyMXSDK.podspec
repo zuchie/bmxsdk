@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.ios.vendored_frameworks = 'ButterflyMXSDK.framework'
 
-  s.ios.source_files = 'pjsip'
+  s.ios.source_files = 'pjsip/include/**/*.{h,hpp}'
   s.ios.public_header_files = 'pjsip/include/**/*.{h,hpp}'
   s.ios.header_dir = 'include'
   s.ios.preserve_paths = 'pjsip/include/**/*.{h,hpp}', 'pjsip/lib/pjsip.a'
