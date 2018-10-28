@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   #s.ios.libraries = 'pjsip'
   #s.ios.requires_arc = false
-  s.ios.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/${s.name}/pjsip/include"'
+  s.ios.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/${s.name}/pjsip/include"',
                       'LIBRARY_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/${s.name}/pjsip/lib"' }
 
   s.dependency 'Alamofire', '~> 4.7.3'
