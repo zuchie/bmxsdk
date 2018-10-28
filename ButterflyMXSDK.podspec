@@ -11,8 +11,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.ios.vendored_frameworks = 'ButterflyMXSDK.framework'
   s.ios.vendored_libraries = 'pjsip/lib/pjsip.a'
-  s.ios.header_mappings_dir  = 'pjsip'
-  s.ios.private_header_files = 'pjsip/include/**/*.{h,hpp}'
+  s.ios.private_header_files = 'pjsip/include/**'
   s.ios.libraries = 'pjsip'
   s.ios.xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/pjsip/include"' }
 
