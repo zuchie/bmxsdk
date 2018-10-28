@@ -10,10 +10,16 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
   s.ios.vendored_frameworks = 'ButterflyMXSDK.framework'
+
+  s.ios.source_files = 'pjsip'
+  s.ios.public_header_files = 'pjsip/include/**/*.{h,hpp}'
+  s.ios.header_dir = 'include'
+  s.ios.preserve_paths = 'pjsip/include/**/*.{h,hpp}', 'pjsip/lib/pjsip.a'
   s.ios.vendored_libraries = 'pjsip/lib/pjsip.a'
-  s.ios.private_header_files = 'pjsip/include/**'
+
   s.ios.libraries = 'pjsip'
-  s.ios.xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/pjsip/include"' }
+  s.ios.requires_arc = false
+  #s.ios.xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/pjsip/include"' }
 
   s.dependency 'Alamofire', '~> 4.7.3'
 end
