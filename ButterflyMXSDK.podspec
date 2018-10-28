@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'ButterflyMXSDK'
-  s.version = '0.8'
+  s.version = '0.9'
   s.license = { :type => 'Apache-2.0', :file => 'LICENSE' }
   s.summary = 'A Swift framework to implement ButterflyMX SDK'
   s.homepage = 'https://github.com/zuchie/bmxsdk.git'
@@ -20,7 +20,9 @@ Pod::Spec.new do |s|
   #s.ios.libraries = 'pjsip'
   #s.ios.requires_arc = false
   s.ios.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/ButterflyMXSDK/pjsip/include"',
-                      'LIBRARY_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/ButterflyMXSDK/pjsip/lib"' }
+                      'LIBRARY_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/ButterflyMXSDK/pjsip/lib"',
+                      'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/ButterflyMXSDK"'
+                      }
 
   s.dependency 'Alamofire', '~> 4.7.3'
 end
