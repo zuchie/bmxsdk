@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'ButterflyMXSDK'
-  s.version = '0.3'
+  s.version = '0.4'
   s.license = { :type => 'Apache-2.0', :file => 'LICENSE' }
   s.summary = 'A Swift framework to implement ButterflyMX SDK'
   s.homepage = 'https://github.com/zuchie/bmxsdk.git'
