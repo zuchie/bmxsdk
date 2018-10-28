@@ -14,12 +14,13 @@ Pod::Spec.new do |s|
   #s.ios.source_files = 'pjsip/include/**/*.{h,hpp}'
   #s.ios.public_header_files = 'pjsip/include/**/*.{h,hpp}'
   #s.ios.header_dir = 'include'
-  s.ios.preserve_paths = 'pjsip/include/**/*.{h,hpp}', 'pjsip/lib/pjsip.a'
-  s.ios.vendored_libraries = 'pjsip/lib/pjsip.a'
+  s.ios.preserve_paths = 'pjsip/**/*'
+  #s.ios.vendored_libraries = 'pjsip/lib/pjsip.a'
 
-  s.ios.libraries = 'pjsip'
-  s.ios.requires_arc = false
-  s.ios.xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/ButterflyMXSDK/pjsip/include"' }
+  #s.ios.libraries = 'pjsip'
+  #s.ios.requires_arc = false
+  s.ios.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/#{s.name}/pjsip/include"', 
+                    'LIBRARY_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/#{s.name}/pjsip/lib"' }
 
   s.dependency 'Alamofire', '~> 4.7.3'
 end
