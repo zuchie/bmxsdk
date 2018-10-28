@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'ButterflyMXSDK'
-  s.version = '0.10'
+  s.version = '0.11'
   s.license = { :type => 'Apache-2.0', :file => 'LICENSE' }
   s.summary = 'A Swift framework to implement ButterflyMX SDK'
   s.homepage = 'https://github.com/zuchie/bmxsdk'
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.ios.preserve_paths = 'pjsip/**/*'
+  s.ios.preserve_paths = 'pjsip/**/*' 'pjsip/include/module.modulemap'
   s.ios.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/ButterflyMXSDK/pjsip/include"',
                       'LIBRARY_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/ButterflyMXSDK/pjsip/lib"',
                       'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/ButterflyMXSDK"'
