@@ -10,7 +10,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.ios.preserve_paths = 'pjsip/**/*' 'pjsip/include/module.modulemap'
+  s.ios.preserve_paths = 'pjsip/**/*'
+  s.ios.preserve_path = 'pjsip/include/module.modulemap'
   s.ios.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/ButterflyMXSDK/pjsip/include"',
                       'LIBRARY_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/ButterflyMXSDK/pjsip/lib"',
                       'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/ButterflyMXSDK"'
